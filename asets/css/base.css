@@ -1,0 +1,134 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+   --height_navbar: 33px;
+   --height_header: 120px;
+   --height_header-search: calc(var(--height_header) - var(--height_navbar));
+    --height_header_select: 44px
+}
+.mobile_search {
+    display: none;
+    padding-left: 12px;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+
+.grid_full {
+    width: 100%;
+}
+
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid_col_2 {
+    width: 16.66666%;
+    padding-left: 5px ;
+    padding-right: 5px;
+}
+
+.grid_col_10 {
+    width: 83.33333%;
+    padding-left: 5px ;
+    padding-right: 5px;
+}
+
+.grid_col_2-4 {
+    width: 20%;
+    padding-left: 5px ;
+    padding-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes inputFadeIn {
+    from {
+        opacity: 0;
+        top: calc(var(--height_header-search) / 2);
+    }
+    to {
+        opacity: 1;
+        top: var(--height_header-search)
+    }
+}
+/* modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.modal_container {
+    margin: auto;
+    background-color: white;
+    width: 520px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* pagination */
+.home_pagination {
+    text-align: center;
+    
+}
+
+.pagination_list {
+
+}
+
+.pagination_item {
+    display: inline-block;
+    list-style: none;
+    margin: 0 12px;
+}
+
+.pagination_item_link {
+    --height: 30px;
+    display: block;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination_item--active .pagination_item_link {
+    background-color: #EE4D2D;
+    color: white;
+}
+
+.pagination_item--active:hover .pagination_item_link {
+    opacity: 0.9;
+}
+
